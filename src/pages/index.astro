@@ -47,19 +47,21 @@ const phrase = PHRASES[phraseIndex];
         class="p-6 flex flex-col items-center justify-center w-screen h-screen"
     >
         <h1
-            class="title text-7xl text-balance italic font-serif text-center max-w-4xl"
+            class="title text-6xl md:text-7xl text-balance italic font-serif text-center max-w-4xl"
         >
             {phrase}
         </h1>
-        <form class="max-w-md w-full border rounded-full flex mt-12 font-sans">
+        <form
+            class="max-w-md w-full border rounded-2xl flex flex-col md:flex-row mt-12 font-sans"
+        >
             <input
-                class="flex-1 rounded-l-full px-4"
+                class="flex-1 rounded-xl rounded-b-none px-4 py-4 md:rounded-tr-none md:rounded-bl-xl"
                 type="email"
                 placeholder="you@example.com"
                 name="email"
             />
             <button
-                class="hover:bg-neutral-500 bg-black transition-colors text-white rounded-r-full font-black py-4 px-6"
+                class="hover:bg-neutral-500 rounded-t-none md:rounded-tr-xl md:rounded-bl-none rounded-xl bg-black transition-colors text-white font-black py-4 px-6"
                 >Get Notified →</button
             >
         </form>
@@ -78,7 +80,9 @@ const phrase = PHRASES[phraseIndex];
             const formData = new FormData(form);
             const email = formData.get("email");
 
-            const { data, error } = await actions.sendEmail({
+            if (!email) return;
+
+            await actions.sendEmail({
                 email,
             });
 
