@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+/*
+Source - https://stackoverflow.com/q/33687468
+Posted by Nag, modified by community. See post 'Timeline' for change history
+Retrieved 2026-02-17, License - CC BY-SA 3.0
+*/
+
+@font-face {
+    font-family: "PP Editorial Old";
+    src: url("fonts/PPEditorialOld/PPEditorialOld-Bold.otf");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PP Editorial Old";
+    src: url("fonts/PPEditorialOld/PPEditorialOld-BoldItalic.otf");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "PP Editorial Old";
+    src: url("fonts/PPEditorialOld/PPEditorialOld-Heavy.otf");
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PP Editorial Old";
+    src: url("fonts/PPEditorialOld/PPEditorialOld-HeavyItalic.otf");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "PP Editorial Old";
+    src: url("fonts/PPEditorialOld/PPEditorialOld-Italic.otf");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "PP Editorial Old";
+    src: url("fonts/PPEditorialOld/PPEditorialOld-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PP Editorial Old";
+    src: url("fonts/PPEditorialOld/PPEditorialOld-Thin.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PP Editorial Old";
+    src: url("fonts/PPEditorialOld/PPEditorialOld-ThinItalic.otf");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: "PP Editorial Old";
+    src: url("fonts/PPEditorialOld/PPEditorialOld-Ultralight.otf");
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PP Editorial Old";
+    src: url("fonts/PPEditorialOld/PPEditorialOld-UltralightItalic.otf");
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "PP Editorial New";
+    src: url("fonts/PPEditorialNew/PPEditorialNew-Bold.otf");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PP Editorial New";
+    src: url("fonts/PPEditorialNew/PPEditorialNew-BoldItalic.otf");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "PP Editorial New";
+    src: url("fonts/PPEditorialNew/PPEditorialNew-Heavy.otf");
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PP Editorial New";
+    src: url("fonts/PPEditorialNew/PPEditorialNew-HeavyItalic.otf");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "PP Editorial New";
+    src: url("fonts/PPEditorialNew/PPEditorialNew-Italic.otf");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "PP Editorial New";
+    src: url("fonts/PPEditorialNew/PPEditorialNew-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PP Editorial New";
+    src: url("fonts/PPEditorialNew/PPEditorialNew-Thin.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PP Editorial New";
+    src: url("fonts/PPEditorialNew/PPEditorialNew-ThinItalic.otf");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: "PP Editorial New";
+    src: url("fonts/PPEditorialNew/PPEditorialNew-Ultralight.otf");
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PP Editorial New";
+    src: url("fonts/PPEditorialNew/PPEditorialNew-UltralightItalic.otf");
+    font-weight: 100;
+    font-style: italic;
+}
+
+@theme {
+    --font-sans: "PP Editorial New", system-ui;
+    --font-serif: "PP Editorial Old", serif;
+}
+
+.title::after {
+    content: "•md";
+    font-style: normal;
+    font-size: 1rem;
+    margin-left: -10px;
+}

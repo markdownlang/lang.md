@@ -1,17 +1,70 @@
 ---
-
+import "../styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>lang.md</title>
+    </head>
+    <body
+        class="p-6 flex flex-col items-center justify-center w-screen h-screen"
+    >
+        <h1 class="title text-7xl text-balance italic font-serif text-center">
+            null is a form of denial
+        </h1>
+        <form class="max-w-md w-full border rounded-full flex mt-12 font-sans">
+            <input
+                class="flex-1 rounded-l-full px-4"
+                type="email"
+                placeholder="you@lang.md"
+                name="email"
+            />
+            <button
+                class="hover:bg-neutral-500 bg-black transition-colors text-white rounded-r-full font-black py-4 px-6"
+                >Get Notified →</button
+            >
+        </form>
+    </body>
 </html>
+
+<script>
+    import { actions } from "astro:actions";
+
+    document
+        .getElementsByTagName("form")[0]!
+        .addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const form = e.target as HTMLFormElement;
+            const formData = new FormData(form);
+            const email = formData.get("email");
+
+            const { data, error } = await actions.sendEmail({
+                email,
+            });
+
+            form.reset();
+        });
+</script>
