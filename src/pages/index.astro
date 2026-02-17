@@ -1,5 +1,17 @@
 ---
 import "../styles/global.css";
+
+const PHRASES = [
+    "null is a form of denial",
+    "We see no reason to accept in syntax what we would reject in prose",
+    "We do not apologize",
+    "We did not so much design this feature as discover it",
+    "We are, for once, in agreement with every style guide",
+    "We acknowledge this and are at peace with it",
+];
+
+const phraseIndex = Math.floor(Math.random() * PHRASES.length);
+const phrase = PHRASES[phraseIndex];
 ---
 
 <html lang="en">
@@ -31,8 +43,10 @@ import "../styles/global.css";
     <body
         class="p-6 flex flex-col items-center justify-center w-screen h-screen"
     >
-        <h1 class="title text-7xl text-balance italic font-serif text-center">
-            null is a form of denial
+        <h1
+            class="title text-7xl text-balance italic font-serif text-center max-w-4xl"
+        >
+            {phrase}
         </h1>
         <form class="max-w-md w-full border rounded-full flex mt-12 font-sans">
             <input

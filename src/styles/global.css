@@ -138,6 +138,6 @@ Retrieved 2026-02-17, License - CC BY-SA 3.0
 .title::after {
     content: "•md";
     font-style: normal;
-    font-size: 1rem;
-    margin-left: -10px;
+    font-size: 1.2rem;
+    margin-left: -12px;
 }
